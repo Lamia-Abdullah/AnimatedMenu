@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(55deg, rgba(47, 120, 255, 0.847), rgb(135, 135, 254));
+}
+
+.menu {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.menu.active {
+    width: 300px;
+    height: 300px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.menu li {
+    position: absolute;
+    list-style: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu.active li {
+    opacity: 1;
+}
+
+.menu li:nth-child(1) {
+    transform: rotate(calc(360deg / 7 * 0)) translateX(0);
+}
+
+.menu li:nth-child(2) {
+    transform: rotate(calc(360deg / 7 * 1)) translateX(0);
+}
+
+.menu li:nth-child(3) {
+    transform: rotate(calc(360deg / 7 * 2)) translateX(0);
+}
+
+.menu li:nth-child(4) {
+    transform: rotate(calc(360deg / 7 * 3)) translateX(0);
+}
+
+.menu li:nth-child(5) {
+    transform: rotate(calc(360deg / 7 * 4)) translateX(0);
+}
+
+.menu li:nth-child(6) {
+    transform: rotate(calc(360deg / 7 * 5)) translateX(0);
+}
+
+.menu li:nth-child(7) {
+    transform: rotate(calc(360deg / 7 * 6)) translateX(0);
+}
+
+.menu.active li:nth-child(1) {
+    transform: rotate(calc(360deg / 7 * 0)) translateX(100px) rotate(calc(-360deg / 7 * 0));
+}
+
+.menu.active li:nth-child(2) {
+    transform: rotate(calc(360deg / 7 * 1)) translateX(100px) rotate(calc(-360deg / 7 * 1));
+}
+
+.menu.active li:nth-child(3) {
+    transform: rotate(calc(360deg / 7 * 2)) translateX(100px) rotate(calc(-360deg / 7 * 2));
+}
+
+.menu.active li:nth-child(4) {
+    transform: rotate(calc(360deg / 7 * 3)) translateX(100px) rotate(calc(-360deg / 7 * 3));
+}
+
+.menu.active li:nth-child(5) {
+    transform: rotate(calc(360deg / 7 * 4)) translateX(100px) rotate(calc(-360deg / 7 * 4));
+}
+
+.menu.active li:nth-child(6) {
+    transform: rotate(calc(360deg / 7 * 5)) translateX(100px) rotate(calc(-360deg / 7 * 5));
+}
+
+.menu.active li:nth-child(7) {
+    transform: rotate(calc(360deg / 7 * 6)) translateX(100px) rotate(calc(-360deg / 7 * 6));
+}
+
+.menu li a {
+    color: white;
+    font-size: 2em;
+    transition: color 0.4s; 
+}
+.menu li a:hover {
+    color: rgb(50, 50, 248);
+}
+
+.toggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    font-size: 2em;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Circular Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="toggle">
+            <ion-icon name="reorder-two-outline"></ion-icon>
+        </div>
+        <ul>
+            <li><a href="#" title="Behance"><ion-icon name="logo-behance"></ion-icon></a></li>
+            <li><a href="#" title="CodePen"><ion-icon name="logo-codepen"></ion-icon></a></li>
+            <li><a href="#" title="Ionic"><ion-icon name="logo-ionic"></ion-icon></a></li>
+            <li><a href="#" title="App Store"><ion-icon name="logo-apple-appstore"></ion-icon></a></li>
+            <li><a href="#" title="Xbox"><ion-icon name="logo-xbox"></ion-icon></a></li>
+            <li><a href="#" title="WordPress"><ion-icon name="logo-wordpress"></ion-icon></a></li>
+            <li><a href="#" title="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        </ul>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+        let toggleIcon = toggle.querySelector('ion-icon');
+
+        toggle.onclick = function() {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                toggleIcon.setAttribute('name', 'close-outline');
+            } else {
+                toggleIcon.setAttribute('name', 'reorder-two-outline');
+            }
+        }
+    </script>
+</body>
+</html>
