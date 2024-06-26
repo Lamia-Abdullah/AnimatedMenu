@@ -19,7 +19,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 1);
     border-radius: 50%;
     transition: 0.5s;
 }
@@ -43,6 +42,7 @@ body {
     list-style: none;
     opacity: 0;
     transition: 0.5s;
+
 }
 
 .menu.active li {
@@ -112,6 +112,13 @@ body {
 }
 .menu li a:hover {
     color: rgb(50, 50, 248);
+}
+
+.menu li a ion-icon {
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    padding: 10px; 
 }
 
 .toggle {
