@@ -10,7 +10,9 @@
 <body>
     <div class="menu">
         <div class="toggle">
-            <ion-icon name="reorder-two-outline"></ion-icon>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
         <ul>
             <li><a href="#" title="Behance"><ion-icon name="logo-behance"></ion-icon></a></li>
@@ -27,15 +29,10 @@
     <script>
         let toggle = document.querySelector('.toggle');
         let menu = document.querySelector('.menu');
-        let toggleIcon = toggle.querySelector('ion-icon');
 
         toggle.onclick = function() {
             menu.classList.toggle('active');
-            if (menu.classList.contains('active')) {
-                toggleIcon.setAttribute('name', 'close-outline');
-            } else {
-                toggleIcon.setAttribute('name', 'reorder-two-outline');
-            }
+            toggle.classList.toggle('active');
         }
     </script>
 </body>
