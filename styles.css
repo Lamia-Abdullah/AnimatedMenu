@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@ body {
     background: linear-gradient(55deg, rgba(47, 120, 255, 0.847), rgb(135, 135, 254));
 }
 
+/* Menu styles */
 .menu {
     position: relative;
     width: 200px;
@@ -42,7 +44,6 @@ body {
     list-style: none;
     opacity: 0;
     transition: 0.5s;
-
 }
 
 .menu.active li {
@@ -110,17 +111,20 @@ body {
     font-size: 2em;
     transition: color 0.4s; 
 }
-.menu li a:hover {
-    color: rgb(50, 50, 248);
-}
 
 .menu li a ion-icon {
     border-radius: 50%;
     background-color: white;
     color: black;
     padding: 10px; 
+    transition:  0.4s; 
 }
 
+.menu li a ion-icon:hover {
+    background-color: rgba(160, 160, 160, 0.52); /*  background color with hover */
+}
+
+/* Toggle button styles */
 .toggle {
     position: absolute;
     width: 60px;
